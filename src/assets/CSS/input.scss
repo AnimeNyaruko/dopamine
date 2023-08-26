@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+@font-face {
+	font-family: BlackerSans;
+	src: url(./fonts/BlackerSansText-Black.woff);
+}
+
+:root {
+	--bg-color: #27374d;
+	--text-color: #a37d44;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: var(--bg-color);
+	overflow-x: hidden;
+}
+::-webkit-scrollbar-thumb {
+	background: var(--text-color);
+	border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+	backdrop-filter: brightness(0.8);
+	border-radius: 10px;
+}
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+.font-SH {
+	font-family: 'Shrikhand', sans-serif, cursive;
+}
+
+.font-BS {
+	font-family: BlackerSans, sans-serif, cursive;
+}
+
+.text-color-main {
+	color: var(--text-color);
+}
+
+.opening-effect {
+	animation: openingEffect 750ms ease-out forwards;
+}
+
+.scroll-animation {
+	opacity: 0;
+	transition: opacity 750ms;
+}
+
+.scroll-animation-scrolled {
+	opacity: 1;
+	animation: openingEffect 750ms ease-out both;
+}
+
+@keyframes openingEffect {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(25%);
+		transform: translateY(25%);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+}
