@@ -600,6 +600,26 @@ video {
   top: 1.5rem;
 }
 
+.top-8{
+  top: 2rem;
+}
+
+.top-4{
+  top: 1rem;
+}
+
+.top-2\/3{
+  top: 66.666667%;
+}
+
+.top-2{
+  top: 0.5rem;
+}
+
+.top-1\/4{
+  top: 25%;
+}
+
 .mx-2{
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -846,6 +866,16 @@ video {
 .object-contain{
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.object-none{
+  -o-object-fit: none;
+     object-fit: none;
+}
+
+.object-center{
+  -o-object-position: center;
+     object-position: center;
 }
 
 .px-0{
