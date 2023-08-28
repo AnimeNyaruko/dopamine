@@ -4,7 +4,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
 @font-face {
-	font-family: BlackerSans;
+	font-family: BlackerSansThin;
+	src: url(./fonts/BlackerSansText-Thin.woff);
+}
+@font-face {
+	font-family: BlackerSansBlack;
 	src: url(./fonts/BlackerSansText-Black.woff);
 }
 
@@ -39,8 +43,12 @@ body {
 	font-family: 'Shrikhand', sans-serif, cursive;
 }
 
-.font-BS {
-	font-family: BlackerSans, sans-serif, cursive;
+.font-BST {
+	font-family: BlackerSansThin, sans-serif, cursive;
+	font-weight: bold;
+}
+.font-BSB {
+	font-family: BlackerSansBlack, sans-serif, cursive;
 }
 
 .text-color-main {
