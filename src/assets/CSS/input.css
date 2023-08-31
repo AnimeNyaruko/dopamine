@@ -59,6 +59,16 @@ body {
   color: var(--text-color);
 }
 
+.section {
+  margin-top: 12rem;
+  margin-bottom: 12rem;
+}
+
+@media (min-width: 1024px) {
+  .section {
+    margin: 0;
+  }
+}
 .opening-effect {
   -webkit-animation: openingEffect 750ms ease-out forwards;
           animation: openingEffect 750ms ease-out forwards;
