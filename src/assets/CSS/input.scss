@@ -59,10 +59,9 @@ body {
 	margin-top: 12rem;
 	margin-bottom: 12rem;
 }
-@media (min-width: 1024px) {
-	.section {
-		margin: 0;
-	}
+
+.section:last-of-type {
+	margin-bottom: 0;
 }
 
 .opening-effect {
@@ -89,5 +88,18 @@ body {
 		opacity: 1;
 		-webkit-transform: translateY(0);
 		transform: translateY(0);
+	}
+}
+
+#specialText {
+	transform: translateY(200%);
+}
+
+@media (min-width: 1024px) {
+	.section {
+		margin: 0;
+	}
+	#specialText {
+		transform: translateY(250%);
 	}
 }
