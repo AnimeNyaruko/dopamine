@@ -12,7 +12,7 @@ export default function App() {
 	return (
 		<>
 			<img
-				src="src/assets/image/logo.png"
+				src="/image/logo.png"
 				className="w-12 lg:w-1/12 ml-5 lg:ml-8 mt-5 absolute h-auto"
 				alt=""
 			/>
@@ -20,11 +20,7 @@ export default function App() {
 				<div
 					style={{ transform: 'translateY(100%)' }}
 					className="relative w-full flex flex-col justify-center items-center top-1/4 lg:top-12 lg:left-0 opening-effect">
-					<img
-						src="src/assets/image/text with brain.png"
-						className="w-2/3 lg:w-1/3 h-full mb-5"
-						alt=""
-					/>
+					<img src="/image/text with brain.png" className="w-2/3 lg:w-1/3 h-full mb-5" alt="" />
 					<p className="font-SH text-5xl lg:text-7xl text-color-main mb-5 opening-effect">RESET</p>
 					<p className="font-BSB text-center text-md lg:text-5xl text-white opening-effect">
 						Thiết lập lại cách bạn tận hưởng niềm vui
@@ -44,7 +40,7 @@ export default function App() {
 						</p>
 					</div>
 					<img
-						src="src/assets/image/ảnh giáo viên.png"
+						src="/image/ảnh giáo viên.png"
 						className="object-contain relative top-6 w-1/5 h-auto"
 						alt=""
 					/>
@@ -53,7 +49,7 @@ export default function App() {
 			<div className="section w-screen h-fit lg:h-screen relative">
 				<div className="scroll-animation relative h-auto w-full mt-0 px-5 top-0 flex justify-between lg:h-fit lg:mt-4 lg:justify-around lg:px-0">
 					<img
-						src="src/assets/image/ảnh trang 2.png"
+						src="/image/ảnh trang 2.png"
 						className="object-contain relative top-6 w-1/5 h-auto"
 						alt=""
 					/>
@@ -67,9 +63,9 @@ export default function App() {
 						</p>
 						<br />
 						<p className="text-white text-justify">
-							Khi làm một số hành động nhất định như ăn đồ ngọt, tập thể dục, lướt điện thoại,...
-							não sẽ tiết ra lượng dopamine để khuyến khích ta tiếp tục lập lại hành động đó.
-							Dopamine vừa đủ sẽ khiến ta cảm thấy sáng tạo, cũng như tập trung hơn.
+							Khi làm một số hành động nhất định như ăn đồ ngọt, tập thể dục, lướt điện thoại,. não
+							sẽ tiết ra lượng dopamine để khuyến khích ta tiếp tục lập lại hành động đó. Dopamine
+							vừa đủ sẽ khiến ta cảm thấy sáng tạo, cũng như tập trung hơn.
 						</p>
 					</div>
 				</div>
@@ -80,7 +76,7 @@ export default function App() {
 						<p className="text-white">BỘI THỰC DOPAMINE</p>
 						<br />
 						<p className="text-white text-justify">
-							Mạng xã hội, nút like, tim, cà phê, trà sữa, game, đồ ăn vặt,.. những nguồn dopamine
+							Mạng xã hội, nút like, tim, cà phê, trà sữa, game, đồ ăn vặt, những nguồn dopamine
 							nhanh, mạnh này luôn chiếm một phẩn trong thói quen sinh hoạt của ta. Đây là những
 							nguồn cung cấp dopamine không hẳn là xấu nhưng ta đang lạm dụng và biến nó trở nên
 							xấu.
@@ -93,7 +89,7 @@ export default function App() {
 						</p>
 					</div>
 					<img
-						src="src/assets/image/dopamine.png"
+						src="/image/dopamine.png"
 						className="object-contain relative top-6 w-1/5 h-auto"
 						alt=""
 					/>
@@ -102,7 +98,7 @@ export default function App() {
 			<div className="section w-screen h-fit lg:h-screen relative">
 				<div className="scroll-animation relative h-auto w-full mt-0 px-5 top-0 flex justify-between lg:h-fit lg:mt-4 lg:justify-around lg:px-0">
 					<img
-						src="src/assets/image/ảnh bác sĩ.png"
+						src="/image/ảnh bác sĩ.png"
 						className="object-contain relative top-6 w-1/5 h-auto"
 						alt=""
 					/>
@@ -142,7 +138,7 @@ export default function App() {
 						<br />
 					</div>
 					<img
-						src="src/assets/image/ảnh lịch.png"
+						src="/image/ảnh lịch.png"
 						className="object-contain relative top-6 w-1/5 h-auto"
 						alt=""
 					/>
@@ -163,7 +159,6 @@ export default function App() {
 					</p>
 				</div>
 			</div>
-			<script type="module" src="src/assets/JS/index.js"></script>
 		</>
 	);
 }

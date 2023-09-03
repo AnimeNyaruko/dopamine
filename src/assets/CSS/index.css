@@ -705,13 +705,13 @@ video {
 @font-face {
   font-family: BlackerSansThin;
 
-  src: url(./fonts/BlackerSansText-Thin.woff);
+  src: url(/fonts/BlackerSansText-Thin.woff);
 }
 
 @font-face {
   font-family: BlackerSansBlack;
 
-  src: url(./fonts/BlackerSansText-Black.woff);
+  src: url(/fonts/BlackerSansText-Black.woff);
 }
 
 :root {
