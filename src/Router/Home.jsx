@@ -1,13 +1,15 @@
 import { Link } from 'react-router-dom';
 import run from '../assets/JS/index.js';
 import importLib from '../assets/JS/importLib.js';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function App() {
+	const [lib, setState] = useState(false);
 	useEffect(() => {
+		if (lib) importLib();
 		run();
-		importLib();
-	}, []);
+		setState(true);
+	}, [lib]);
 
 	return (
 		<>

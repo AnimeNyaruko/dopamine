@@ -41,8 +41,8 @@ export default function run() {
 		}, time);
 	};
 
+	if (mediaQuery && !mediaQuery.matches) throttle(scrollHandler, 250);
 	window.addEventListener('scroll', () => {
-		console.log(window.innerHeight);
 		if (mediaQuery && !mediaQuery.matches) throttle(scrollHandler, 250);
 	});
 }
