@@ -1,4 +1,4 @@
-import Config from '../assets/JS/Start.js';
+import Config from '../assets/JS/Config.js';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -21,70 +21,70 @@ export default function Start() {
 				<div className="w-full h-full flex justify-center items-center">
 					<Link
 						className="DaysItem w-full h-full py-8 relative rounded-2xl border border-4 border-white border-solid text-center"
-						to="Day/1">
+						to="Day1">
 						1
 					</Link>
 				</div>
 				<div className="w-full h-full flex justify-center items-center">
 					<Link
 						className="DaysItem w-full h-full py-8 relative rounded-2xl border border-4 border-white border-solid text-center"
-						to="Day/2">
+						to="Day2">
 						2
 					</Link>
 				</div>
 				<div className="w-full h-full flex justify-center items-center">
 					<Link
 						className="DaysItem w-full h-full py-8 relative rounded-2xl border border-4 border-white border-solid text-center"
-						to="Day/3">
+						to="Day3">
 						3
 					</Link>
 				</div>
 				<div className="w-full h-full flex justify-center items-center">
 					<Link
 						className="DaysItem w-full h-full py-8 relative rounded-2xl border border-4 border-white border-solid text-center"
-						to="Day/4">
+						to="Day4">
 						4
 					</Link>
 				</div>
 				<div className="w-full h-full flex justify-center items-center">
 					<Link
 						className="DaysItem w-full h-full py-8 relative rounded-2xl border border-4 border-white border-solid text-center"
-						to="Day/5">
+						to="Day5">
 						5
 					</Link>
 				</div>
 				<div className="w-full h-full flex justify-center items-center">
 					<Link
 						className="DaysItem w-full h-full py-8 relative rounded-2xl border border-4 border-white border-solid text-center"
-						to="Day/6">
+						to="Day6">
 						6
 					</Link>
 				</div>
 				<div className="w-full h-full flex justify-center items-center">
 					<Link
 						className="DaysItem w-full h-full py-8 relative rounded-2xl border border-4 border-white border-solid text-center"
-						to="Day/7">
+						to="Day7">
 						7
 					</Link>
 				</div>
 				<div className="w-full h-full flex justify-center items-center">
 					<Link
 						className="DaysItem w-full h-full py-8 relative rounded-2xl border border-4 border-white border-solid text-center"
-						to="Day/8">
+						to="Day8">
 						8
 					</Link>
 				</div>
 				<div className="w-full h-full flex justify-center items-center">
 					<Link
 						className="DaysItem w-full h-full py-8 relative rounded-2xl border border-4 border-white border-solid text-center"
-						to="Day/9">
+						to="Day9">
 						9
 					</Link>
 				</div>
 				<div className="w-full h-full flex justify-center items-center">
 					<Link
 						className="DaysItem w-full h-full py-8 relative rounded-2xl border border-4 border-white border-solid text-center"
-						to="Day/10">
+						to="Day10">
 						10
 					</Link>
 				</div>
