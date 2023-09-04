@@ -18,9 +18,9 @@ export default function Day() {
 	return (
 		<>
 			<div className="text-white text-4xl w-screen h-auto">
-				<div className="relative left-1/2 -translate-x-1/2 w-2/3 lg:w-1/2 h-1/6 my-12 flex flex-col lg:flex-row justify-between items-center">
+				<div className="relative left-1/2 -translate-x-1/2 w-2/3 lg:w-1/2 h-1/6 my-8 sm:my-12 flex flex-col lg:flex-row justify-between items-center">
 					<div className=" w-fit h-full flex justify-center items-center">
-						<p className="DaysItem font-BSB w-full h-full py-8 relative rounded-2xl border border-4 border-white border-solid flex justify-center items-center">
+						<p className="DaysItem font-BSB w-full h-full py-5 sm:py-8 relative rounded-2xl border border-4 border-white border-solid flex justify-center items-center">
 							1
 						</p>
 					</div>
@@ -30,6 +30,7 @@ export default function Day() {
 						</p>
 					</div>
 				</div>
+				<div className="relative left-1/2 -translate-x-1/2 w-4/5"></div>
 			</div>
 		</>
 	);
