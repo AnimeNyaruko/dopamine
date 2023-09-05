@@ -39,6 +39,17 @@ body {
 	width: 10px;
 }
 
+#activities .activity-items:first-of-type {
+	margin-top: 0;
+}
+#activities .activity-items:last-of-type {
+	margin-bottom: 0;
+}
+#activities .activity-items {
+	margin-top: 0.75rem;
+	margin-bottom: 0.75rem;
+}
+
 .font-SH {
 	font-family: 'Shrikhand', sans-serif, cursive;
 }
@@ -91,10 +102,39 @@ body {
 	}
 }
 
+@media (min-width: 1024px) {
+	.click-effect-object {
+		display: none !important;
+	}
+}
+.click-effect-arrow {
+	display: block !important;
+	animation: arrowEffect 1.5s cubic-bezier(0, 0.25, 1, 0.75) infinite;
+}
+
+@keyframes arrowEffect {
+	0% {
+		transform: translateX(0%);
+		opacity: 0;
+	}
+	33% {
+		opacity: 1;
+	}
+	66% {
+		transform: translateX(200%);
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
 #specialText {
 	transform: translateY(200%);
 }
-
+#progressLine {
+	top: 100%;
+	transform: translateY(-110%);
+}
 @media (min-width: 1024px) {
 	.section {
 		margin: 0;

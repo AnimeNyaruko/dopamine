@@ -30,19 +30,8 @@ export default function run() {
 		});
 	};
 
-	let throttleCheck = false;
-	const throttle = (callback, time) => {
-		if (throttleCheck) return;
-
-		throttleCheck = true;
-		setTimeout(() => {
-			callback();
-			throttleCheck = false;
-		}, time);
-	};
-
-	if (mediaQuery && !mediaQuery.matches) throttle(scrollHandler, 250);
+	if (mediaQuery && !mediaQuery.matches) scrollHandler();
 	window.addEventListener('scroll', () => {
-		if (mediaQuery && !mediaQuery.matches) throttle(scrollHandler, 250);
+		if (mediaQuery && !mediaQuery.matches) scrollHandler();
 	});
 }

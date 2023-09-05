@@ -1,93 +1,39 @@
-import Config from '../assets/JS/Config.js';
-import { useEffect, useState } from 'react';
+import ClickEffect from '../assets/JS/clickEffect.jsx';
 import { Link } from 'react-router-dom';
+import { useState, useEffect, useRef } from 'react';
 
 export default function Start() {
+	const clickEffect = useRef([]);
+	const counter = (e) => clickEffect.current.push(e);
 	const [state, setState] = useState(false);
 	useEffect(() => {
 		if (state) {
-			Config.forEach((e) => {
-				e();
-			});
+			ClickEffect(clickEffect.current);
 		}
 		setState(true);
 	}, [state]);
 	return (
-		<div className="w-screen h-screen relative flex flex-col items-center text-white text-4xl">
-			<p className="font-BSB relative my-12 px-auto text-center">
-				Chặng 1: “Nhổ cỏ dại trong khu vườn”
-			</p>
-			<div className="font-BSB grid gap-5 grid-rows-5 grid-cols-2 lg:grid-rows-2 lg:grid-cols-5 lg:w-3/4">
-				<div className="w-full h-full flex justify-center items-center">
-					<Link
-						className="DaysItem w-full h-full py-8 relative rounded-2xl border border-4 border-white border-solid text-center"
-						to="Day1">
-						1
-					</Link>
-				</div>
-				<div className="w-full h-full flex justify-center items-center">
-					<Link
-						className="DaysItem w-full h-full py-8 relative rounded-2xl border border-4 border-white border-solid text-center"
-						to="Day2">
-						2
-					</Link>
-				</div>
-				<div className="w-full h-full flex justify-center items-center">
-					<Link
-						className="DaysItem w-full h-full py-8 relative rounded-2xl border border-4 border-white border-solid text-center"
-						to="Day3">
-						3
-					</Link>
-				</div>
-				<div className="w-full h-full flex justify-center items-center">
-					<Link
-						className="DaysItem w-full h-full py-8 relative rounded-2xl border border-4 border-white border-solid text-center"
-						to="Day4">
-						4
-					</Link>
-				</div>
-				<div className="w-full h-full flex justify-center items-center">
-					<Link
-						className="DaysItem w-full h-full py-8 relative rounded-2xl border border-4 border-white border-solid text-center"
-						to="Day5">
-						5
-					</Link>
-				</div>
-				<div className="w-full h-full flex justify-center items-center">
-					<Link
-						className="DaysItem w-full h-full py-8 relative rounded-2xl border border-4 border-white border-solid text-center"
-						to="Day6">
-						6
-					</Link>
-				</div>
-				<div className="w-full h-full flex justify-center items-center">
-					<Link
-						className="DaysItem w-full h-full py-8 relative rounded-2xl border border-4 border-white border-solid text-center"
-						to="Day7">
-						7
-					</Link>
-				</div>
-				<div className="w-full h-full flex justify-center items-center">
-					<Link
-						className="DaysItem w-full h-full py-8 relative rounded-2xl border border-4 border-white border-solid text-center"
-						to="Day8">
-						8
-					</Link>
-				</div>
-				<div className="w-full h-full flex justify-center items-center">
-					<Link
-						className="DaysItem w-full h-full py-8 relative rounded-2xl border border-4 border-white border-solid text-center"
-						to="Day9">
-						9
-					</Link>
-				</div>
-				<div className="w-full h-full flex justify-center items-center">
-					<Link
-						className="DaysItem w-full h-full py-8 relative rounded-2xl border border-4 border-white border-solid text-center"
-						to="Day10">
-						10
-					</Link>
-				</div>
+		<div className="w-screen h-screen text-white flex justify-center items-center">
+			<div className=" w-2/3 lg:w-1/2 h-1/2 flex flex-col justify-between items-center font-BSB text-xl sm:text-2xl lg:text-4xl">
+				<Link
+					ref={state ? counter : null}
+					className="opening-effect cursor-pointer click-effect"
+					to="/Chang/1">
+					Chặng 1: “Nhổ cỏ dại trong khu vườn”
+				</Link>
+				<Link
+					ref={state ? counter : null}
+					className="opening-effect cursor-pointer click-effect"
+					to="/Chang/2">
+					Chặng 2: “Gieo trồng những hạt giống tốt”
+				</Link>
+				<Link
+					ref={state ? counter : null}
+					className="opening-effect cursor-pointer click-effect"
+					to="/Chang/3">
+					Chặng 3: “Chăm sóc cho khu vườn”
+				</Link>
+				<i className="click-effect-object absolute font-2xl section fa-solid fa-forward"></i>
 			</div>
 		</div>
 	);

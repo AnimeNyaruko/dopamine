@@ -6,8 +6,10 @@ import { useEffect, useState } from 'react';
 export default function App() {
 	const [lib, setState] = useState(false);
 	useEffect(() => {
-		if (lib) importLib();
-		run();
+		if (lib) {
+			importLib();
+			run();
+		}
 		setState(true);
 	}, [lib]);
 
@@ -155,7 +157,7 @@ export default function App() {
 					<p className="text-center text-2xl lg:text-7xl">
 						Nhấn vào
 						<span id="start-btn" className="text-red cursor-pointer">
-							<Link to="/Start"> Đây </Link>
+							<Link to="/Chang"> Đây </Link>
 						</span>
 						để tham gia vào lịch trình Dopamine Reset
 					</p>
