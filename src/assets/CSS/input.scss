@@ -39,12 +39,12 @@ body {
 	width: 10px;
 }
 
-#activities .activity-items:first-of-type {
-	margin-top: 0;
-}
-#activities .activity-items:last-of-type {
-	margin-bottom: 0;
-}
+// #activities .activity-items:first-of-type {
+// 	margin-top: 0;
+// }
+// #activities .activity-items:last-of-type {
+// 	margin-bottom: 0;
+// }
 #activities .activity-items {
 	margin-top: 0.75rem;
 	margin-bottom: 0.75rem;
@@ -131,9 +131,8 @@ body {
 #specialText {
 	transform: translateY(200%);
 }
-#progressLine {
-	top: 100%;
-	transform: translateY(-110%);
+#progressLine #mask {
+	transition: width 0.25s linear;
 }
 @media (min-width: 1024px) {
 	.section {

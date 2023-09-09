@@ -4,5 +4,9 @@ function DaysItemConfig() {
 		e.style.width = height + 'px';
 	});
 }
-
-export default [DaysItemConfig];
+function progressConfig() {
+	const height = window.innerHeight;
+	const e = document.getElementById('progressLine');
+	e.style.top = height + 'px';
+}
+export default [DaysItemConfig, progressConfig];

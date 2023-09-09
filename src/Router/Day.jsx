@@ -1,10 +1,13 @@
 import { useParams } from 'react-router-dom';
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import Config from '../assets/JS/Config.js';
+import DayFrame from './Days/DayFrameworkl.jsx';
+import DayList from './Days/DayList.js';
 
 export default function Day() {
+	const param = useParams();
+	const dayNumber = parseInt(param.dayID[param.dayID.length - 1]);
 	const [state, setState] = useState(false);
-	const [progress, setProgress] = useState(0);
 
 	useEffect(() => {
 		if (state) {
@@ -14,10 +17,8 @@ export default function Day() {
 		}
 		setState(true);
 	}, [state]);
-	return <></>;
+	return DayFrame(DayList[dayNumber - 1]);
 }
 
 /**
- * TODO: Build the progress bar.
- * TODO: Add effects for each activities to 2 states: "not done" and "done"
  */
