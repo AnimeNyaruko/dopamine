@@ -20,7 +20,7 @@ export default function App() {
 		<Routes>
 			<Route index path="/" element={<Home />} />
 			<Route path="/Chang" element={<Start />} />
-			<Route path="Chang/:changID/*" element={<Stages />} />
+			<Route path="Chang/:changID/" element={<Stages />} />
 			<Route path="Chang/:changID/:dayID" element={<Day />} />
 		</Routes>
 	);
