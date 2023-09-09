@@ -132,7 +132,7 @@ body {
 	transform: translateY(200%);
 }
 #progressLine #mask {
-	transition: width 0.25s linear;
+	transition: width 0.5s cubic-bezier(0.33, 1, 0.68, 1);
 }
 @media (min-width: 1024px) {
 	.section {

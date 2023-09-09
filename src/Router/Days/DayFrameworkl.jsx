@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import AnimatedNumber from 'react-animated-number';
+import AnimatedNumber from 'animated-number-react';
 
 function DayFrame(Day) {
 	const DayNumber = Day.day;
@@ -83,10 +83,11 @@ function DayFrame(Day) {
 					className="bg-[var(--bg-color)] absolute h-full w-full left-full -translate-x-full"></div>
 				<p className="relative left-1/2 -translate-x-1/2 w-fit text-md z-10">
 					<AnimatedNumber
-						initialValue={progress - 1 < 0 ? 0 : (progress - 1) * (100 / ActiveAbleElement)}
+						style={{ transition: 'cubic-bezier(0.33, 1, 0.68, 1);' }}
 						value={progress * (100 / ActiveAbleElement)}
-						formatValue={(n) => n.toFixed(2) + '%'}
-						duration={250}></AnimatedNumber>
+						formatValue={(n) => `${Number(n).toFixed(2)}%`}
+						duration={500}
+					/>
 				</p>
 			</div>
 		</>
