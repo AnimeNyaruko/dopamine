@@ -249,29 +249,19 @@ function Chang3() {
 	);
 }
 
+const ChangList = [Chang1(), Chang2(), Chang3()];
+
 export default function Stages() {
 	const param = useParams();
+	const ChangNumber = Number(param.changID);
 	const [state, setState] = useState(false);
-	const [content, setContent] = useState(null);
 
 	useEffect(() => {
 		if (state) {
+			console.log(ChangNumber);
 			DaysItemConfig();
 		}
 		setState(true);
 	}, [state]);
-	useEffect(() => {
-		switch (param.changID) {
-			case '1':
-				setContent(Chang1());
-				break;
-			case '2':
-				setContent(Chang2());
-				break;
-			case '3':
-				setContent(Chang3());
-				break;
-		}
-	}, [param.changID]);
-	return <>{content}</>;
+	return ChangList[ChangNumber - 1];
 }
