@@ -1,4 +1,4 @@
-import Config from '../../assets/JS/Config.js';
+import { DaysItemConfig } from '../../assets/JS/Config.js';
 import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 
@@ -256,9 +256,7 @@ export default function Stages() {
 
 	useEffect(() => {
 		if (state) {
-			Config.forEach((e) => {
-				e();
-			});
+			DaysItemConfig();
 		}
 		setState(true);
 	}, [state]);

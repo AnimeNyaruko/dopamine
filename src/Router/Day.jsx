@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import Config from '../assets/JS/Config.js';
+import { DaysItemConfig, progressConfig } from '../assets/JS/Config.js';
 import DayFrame from './Days/DayFrameworkl.jsx';
 import DayList from './Days/DayList.js';
 
@@ -11,9 +11,8 @@ export default function Day() {
 
 	useEffect(() => {
 		if (state) {
-			Config.forEach((e) => {
-				e();
-			});
+			progressConfig();
+			DaysItemConfig();
 		}
 		setState(true);
 	}, [state]);
