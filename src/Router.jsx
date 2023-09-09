@@ -1,14 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
 import Home from './Router/Home.jsx';
 import Start from './Router/Start.jsx';
-import Stages from './Router/Stage/Stages.jsx';
+import Stages from './Router/Stages.jsx';
 import Day from './Router/Day.jsx';
 import importLib from './assets/JS/importLib.js';
 import { useEffect, useState } from 'react';
-
-/**
- * TODO: Need to add "Day" Component for every "Days" links
- */
 
 export default function App() {
 	const [state, setState] = useState(false);
