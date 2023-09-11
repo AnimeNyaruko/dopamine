@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { DaysItemConfig, progressConfig } from '../assets/JS/Config.js';
 import DayFrame from './Days/DayFrameworkl.jsx';
-import DayList from './Days/DayList.js';
+import DayList from './Days/DayList.jsx';
 
 export default function Day() {
 	const param = useParams();

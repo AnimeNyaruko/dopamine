@@ -83,10 +83,9 @@ function DayFrame(Day) {
 					className="bg-[var(--bg-color)] absolute h-full w-full left-full -translate-x-full"></div>
 				<p className="relative left-1/2 -translate-x-1/2 w-fit text-md z-10">
 					<AnimatedNumber
-						style={{ transition: 'cubic-bezier(0.33, 1, 0.68, 1);' }}
 						value={progress * (100 / ActiveAbleElement)}
-						formatValue={(n) => `${Number(n).toFixed(2)}%`}
 						duration={500}
+						formatValue={(n) => `${Number(n).toFixed(2)}%`}
 					/>
 				</p>
 			</div>

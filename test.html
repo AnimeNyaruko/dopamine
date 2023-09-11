@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head> </head>
+	<body>
+		<div id="root"></div>
+		<script>
+			let start = 25;
+			let end = 50;
+			let duration = 5000 / 1000;
+			let totalframe = duration * 60;
+			let timeframe = 1 / totalframe;
+			let time = 0;
+			let currentTime = 0;
+			let frame;
+			let x1, x2;
+			x1 = 1;
+			x2 = 1;
+
+			function bezier(t, initial, p1, p2, completed) {
+				return (
+					(1 - t) * (1 - t) * (1 - t) * initial +
+					3 * (1 - t) * (1 - t) * t * p1 +
+					3 * (1 - t) * t * t * p2 +
+					t * t * t * completed
+				);
+			}
+			function run() {
+				if (time * duration <= duration) {
+					currentTime = bezier(time, start, x1 * end, x2 * end, end);
+					time += timeframe;
+					document.getElementById('root').innerHTML = currentTime.toFixed(0) + '%';
+					frame = requestAnimationFrame(run);
+				} else {
+					cancelAnimationFrame(frame);
+				}
+			}
+			run();
+		</script>
+	</body>
+</html>
