@@ -73,8 +73,106 @@ const Day3 = {
 		},
 	],
 };
+
+const Day4 = {
+	ActiveAble: 3,
+	day: 4,
+	stage: `Chặng 1: “Nhổ cỏ dại trong khu vườn”`,
+	activities: [
+		{
+			canActive: true,
+			content: `• Giảm 40% số lượng, thời gian bạn dành cho mạng xã hội, game, mua sắm,...`,
+		},
+		{
+			canActive: true,
+			content: `• Tìm hiểu ảnh hưởng tiêu cực của những thói quen xấu lên sức khỏe và cuộc sống của bạn.`,
+		},
+		{
+			canActive: true,
+			content: `=> Ghi những ảnh hưởng đó vào giấy, dán ở nơi dễ nhìn thấy.`,
+		},
+	],
+};
+
 DayList.push(Day1);
 DayList.push(Day2);
 DayList.push(Day3);
+DayList.push(Day4);
+
+const Day5 = {
+	ActiveAble: 3,
+	day: 5,
+	stage: `Chặng 1: “Nhổ cỏ dại trong khu vườn”`,
+	activities: [
+		{
+			canActive: true,
+			content: `• Giảm 40% số lượng, thời gian bạn dành cho mạng xã hội, game, mua sắm,...`,
+		},
+		{
+			canActive: true,
+			content: `• Ngưng dùng mạng xã hội trên điện thoại, dùng trên máy tính.`,
+		},
+		{
+			canActive: true,
+			content: `• Chỉnh màn hình thành trắng đen để trách các kích thích về mặt thị giác`,
+		},
+	],
+};
+DayList.push(Day5);
+
+const Day6 = {
+	ActiveAble: 2,
+	day: 6,
+	stage: `Chặng 1: “Nhổ cỏ dại trong khu vườn”`,
+	activities: [
+		{
+			canActive: true,
+			content: `• Giảm 60% số lượng, thời gian bạn dành cho mạng xã hội, game, mua sắm,...`,
+		},
+		{
+			canActive: true,
+			content: `• Tìm hiểu về các hiệu ứng tâm lý liên quan đến việc nghiện.`,
+		},
+		{
+			canActive: false,
+			content: (
+				<>
+					<p>Một số hiệu ứng tâm lý để tìm hiểu:</p>
+					<ul className="list-[decimal] list-inside">
+						<li className="my-2">Phần thường ngẫu nhiên</li>
+						<li className="my-2">Sự vắng mặt của tín hiệu dừng lại</li>
+						<li className="my-2">Bằng chứng xã hội</li>
+					</ul>
+				</>
+			),
+		},
+	],
+};
+DayList.push(Day6);
+
+const Day7 = {
+	ActiveAble: 2,
+	day: 7,
+	stage: `Chặng 1: “Nhổ cỏ dại trong khu vườn”`,
+	activities: [
+		{
+			canActive: true,
+			content: `• Giảm 60% số lượng, thời gian bạn dành cho mạng xã hội, game, mua sắm,...`,
+		},
+		{
+			canActive: false,
+			content: `Tuần đầu tiên trong chặng 1 đã kết thúc. Bạn cảm thấy như thế nào về mặt tinh thần và thể chất. `,
+		},
+		{
+			canActive: true,
+			content: `• Hãy viết ra suy nghĩ của mình nhé.`,
+		},
+		{
+			canActive: false,
+			content: `Mệt mỏi, nhức đầu, bồi chồn,.. đâu là những dấu hiệu cơ thể bình thường khi não bộ ít tiết dopamine hơn. Bạn đang làm rất tốt, cố gắng lên!`,
+		},
+	],
+};
+DayList.push(Day7);
 
 export default DayList;
