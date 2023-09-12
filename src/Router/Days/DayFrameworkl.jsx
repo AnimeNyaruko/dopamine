@@ -63,7 +63,7 @@ function DayFrame(Day) {
 					<div className="w-fit h-fit font-extrabold text-3xl sm:text-4xl lg:text-6xl">
 						Hoạt động
 					</div>
-					<div id="activities" className="overflow-y-auto mt-4 text-xl sm:text-2xl lg:text-4xl">
+					<div id="activities" className="mt-4 text-xl sm:text-2xl lg:text-4xl">
 						{Activities.map((e, i) => {
 							return ContentElement(e, i);
 						})}

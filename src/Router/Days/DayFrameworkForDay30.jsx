@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
 import AnimatedNumber from 'animated-number-react';
 
-function DayFrameSpecial(Day) {
+function Day30(Day) {
 	const DayNumber = Day.day;
 	const Activities = Day.activities;
 	const ActiveAbleElement = Day.ActiveAble;
@@ -38,7 +38,7 @@ function DayFrameSpecial(Day) {
 			);
 		} else {
 			return (
-				<div key={key} className="activity-items w-fit font-medium font-semibold">
+				<div key={key} className="activity-items font-medium font-semibold">
 					{Content.content}
 				</div>
 			);
@@ -100,4 +100,4 @@ function DayFrameSpecial(Day) {
 	return HTMLcode;
 }
 
-export default DayFrameSpecial;
+export default Day30;

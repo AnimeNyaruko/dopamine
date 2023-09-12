@@ -17,7 +17,7 @@ export default function Stages() {
 
 	useEffect(() => {
 		if (state) {
-			console.log(ChangNumber);
+			window.sessionStorage.setItem('isReload', false);
 			DaysItemConfig();
 		}
 		setState(true);

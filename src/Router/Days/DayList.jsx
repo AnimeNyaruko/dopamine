@@ -303,4 +303,427 @@ const Day13 = {
 };
 DayList.push(Day13);
 
+const Day14 = {
+	ActiveAble: 2,
+	day: 14,
+	stage: `Chặng 2: “Gieo trồng những hạt giống tốt”`,
+	activities: [
+		{
+			canActive: true,
+			content: `• Lập “Moring routine” việc cần làm vào mỗi buổi sáng
+		Những việc này sẽ giúp cho bạn tiết kiệm thời gian chuẩn bị vào buổi sáng. Hạn chế việc sao nhãng vào thú vui không cần thiết khi vừa mới thức dậy.`,
+		},
+		{
+			canActive: false,
+			content: `Ví dụ: thức dậy \\(\\implies\\) uống nước \\(\\implies\\) giãn cơ \\(\\implies\\) vệ sinh cá nhân \\(\\implies\\) ăn sáng \\(\\implies\\) đến trường`,
+		},
+		{
+			canActive: true,
+			content: `• Có thể kiểm tra tin nhắn vào buổi sáng, nhưng hạn chế việc lướt mạng xã hội, trang mua sắm và chơi game,...`,
+		},
+	],
+};
+DayList.push(Day14);
+
+const Day15 = {
+	ActiveAble: 1,
+	day: 15,
+	stage: `Chặng 2: “Gieo trồng những hạt giống tốt”`,
+	activities: [
+		{
+			canActive: true,
+			content: `• Thực hiện “Moring routine” đều đặn vào mỗi buổi sáng để trở thành thói quen.`,
+		},
+		{
+			canActive: false,
+			content: `Bạn đã đồng hành cùng DOPAMINE RESET được một nửa chặng đường. Mỗi nổ lực và cố gắng đều được ghi nhận và hãy luôn hướng về mục tiêu phía trước!`,
+		},
+	],
+};
+DayList.push(Day15);
+
+const Day16 = {
+	ActiveAble: 3,
+	day: 16,
+	stage: `Chặng 2: “Gieo trồng những hạt giống tốt”`,
+	activities: [
+		{
+			canActive: true,
+			content: `• Thực hiện đều đặn “Moring routine”.`,
+		},
+		{
+			canActive: true,
+			content: `• Sáng nay bạn đã uống nước chưa?`,
+		},
+		{
+			canActive: true,
+			content: `• Bạn có thể tìm một người đồng hành. `,
+		},
+		{
+			canActive: false,
+			content: `Chia sẻ mục tiêu của bạn với một người bạn hoặc thành viên gia đình có thể giúp bạn duy trì động lực.`,
+		},
+	],
+};
+DayList.push(Day16);
+
+const Day17 = {
+	ActiveAble: 2,
+	day: 17,
+	stage: `Chặng 2: “Gieo trồng những hạt giống tốt”`,
+	activities: [
+		{
+			canActive: true,
+			content: `• Khi đã thực hiện tốt “Morning routine”, hãy lập “Night routine”. Những công việc thường làm vào buổi tối sẽ giúp bạn ngủ ngon hơn, nạp lại năng lượng sau ngày dài.`,
+		},
+		{
+			canActive: false,
+			content: `Ví dụ: làm bài tập \\(\\implies\\) lập kế hoạch cho ngày mai \\(\\implies\\) giãn cơ \\(\\implies\\) vệ sinh cá nhân \\(\\implies\\) ngủ`,
+		},
+		{
+			canActive: true,
+			content: `• Bạn có thể điều chỉnh Night routine cho phù hợp với lịch trình sinh hoạt cá nhân.`,
+		},
+	],
+};
+DayList.push(Day17);
+
+const Day18 = {
+	ActiveAble: 4,
+	day: 18,
+	stage: `Chặng 2: “Gieo trồng những hạt giống tốt”`,
+	activities: [
+		{
+			canActive: true,
+			content: `• Duy trì “Moring routine” và “Night routine”.`,
+		},
+		{
+			canActive: false,
+			content: `Để có một “Night routine” tốt hơn, hãy thêm vào những điều sau:`,
+		},
+		{
+			canActive: true,
+			content: `• Ngủ trước 11 giờ`,
+		},
+		{
+			canActive: true,
+			content: `• Hạn chế dùng thiết bị điện tử 1 tiếng trước khi ngủ`,
+		},
+		{
+			canActive: true,
+			content: `• Không uống cà phê, trà 5 tiếng trước khi ngủ`,
+		},
+	],
+};
+DayList.push(Day18);
+
+const Day19 = {
+	ActiveAble: 1,
+	day: 19,
+	stage: `Chặng 2: “Gieo trồng những hạt giống tốt”`,
+	activities: [
+		{
+			canActive: true,
+			content: `Bạn có thể bắt đầu thấy những thay đổi tích cực về mặt tinh thần và thể chất.
+		Luôn nhớ rằng đây  là một quá trình lâu dài, vì vậy hãy kiên nhẫn với bản thân.`,
+		},
+	],
+};
+DayList.push(Day19);
+
+const Day20 = {
+	ActiveAble: 1,
+	day: 20,
+	stage: `Chặng 2: “Gieo trồng những hạt giống tốt”`,
+	activities: [
+		{
+			canActive: false,
+			content: `Chặng 2: “Gieo trồng những hạt giống tốt” đã kết thúc. Chúng tôi vô cùng hân hạnh khi được cùng bạn đồng hành trên chặng đường này. Bạn đã là phiên bản tốt hơn của chính bạn so với khi trước.`,
+		},
+		{
+			canActive: true,
+			content: `Hãy tự khen thưởng chính mình và tiếp tục cuộc hành trình nhé. `,
+		},
+	],
+};
+DayList.push(Day20);
+
+const Day21 = {
+	ActiveAble: 2,
+	day: 21,
+	stage: `Chặng 3 “Chăm sóc cho khu vườn”`,
+	activities: [
+		{
+			canActive: false,
+			content: (
+				<>
+					<p>
+						Một chặng đường mới đã mở ra. Ở chặng 3 này, ta sẽ cùng nhau duy trì, hoàn thiện những
+						thói quen, sở thích ở chặng 2 cũng như tránh xa thói quen xấu ở chặng 1.
+					</p>
+					<br />
+					<p>Trả lời câu hỏi và tự nhận xét bản thân:</p>
+				</>
+			),
+		},
+		{
+			canActive: true,
+			content: `• Sở thích hiện tại của bạn là những gì?`,
+		},
+		{
+			canActive: true,
+			content: `• Bạn đã thực hiện “Morning Routine” và “Night Routine” mỗi ngày không?`,
+		},
+	],
+};
+DayList.push(Day21);
+
+const Day22 = {
+	ActiveAble: 3,
+	day: 22,
+	stage: `Chặng 3 “Chăm sóc cho khu vườn”`,
+	activities: [
+		{
+			canActive: false,
+			content: (
+				<>
+					<p>
+						Vào những ngày cuối của hành trình, ta thường cảm thấy chán nản, muốn dừng lại. Sau đây
+						là những bài tập giúp bạn lấy lại động lực.
+					</p>
+					<br />
+					<p>Bài tập thực hiện:</p>
+				</>
+			),
+		},
+		{
+			canActive: true,
+			content: `• So sánh bản thân trước khi tham gia DOPAMINE RESET và hiện tại.`,
+		},
+		{
+			canActive: true,
+			content: `• Liệt kê những thói quen xấu mà bạn đã từ bỏ được.`,
+		},
+		{
+			canActive: true,
+			content: `• Liệt kê những thói quen tốt mà bạn đã thực hiện.`,
+		},
+	],
+};
+DayList.push(Day22);
+
+const Day23 = {
+	ActiveAble: 3,
+	day: 23,
+	stage: `Chặng 3 “Chăm sóc cho khu vườn”`,
+	activities: [
+		{
+			canActive: true,
+			content: `• Duy trì “Morning Routine” và “Night Routine”.`,
+		},
+		{
+			canActive: true,
+			content: `• Hạn chế những kích thích dopamine mạnh (mạng xã hội, game, đồ ngọt,...)`,
+		},
+		{
+			canActive: true,
+			content: `• Xóa những ứng dụng mạng xã hội, game, mua sắm không cần thiết khỏi điện thoại.`,
+		},
+	],
+};
+DayList.push(Day23);
+
+const Day24 = {
+	ActiveAble: 2,
+	day: 24,
+	stage: `Chặng 3 “Chăm sóc cho khu vườn”`,
+	activities: [
+		{
+			canActive: false,
+			content: `Để rèn luyện kỉ luật và thấu hiểu bản thân hơn, bạn nên bắt đầu viết Journal, có rất nhiều thể loại nhưng chúng tôi đề xuất Bullet Journal và Gratitude Journal để phù hợp rất với chương trình DOPAMINE RESET`,
+		},
+		{
+			canActive: true,
+			content: (
+				<>
+					<b>Bullet Journal:</b> viết về mục tiêu, dự định, danh sách việc cần làm mỗi ngày.
+				</>
+			),
+		},
+		{
+			canActive: true,
+			content: (
+				<>
+					<b>Gratitude Journal:</b> viết về những điều bạn biết ơn, lý do và cảm xúc về những điều
+					đó.
+				</>
+			),
+		},
+	],
+};
+DayList.push(Day24);
+
+const Day25 = {
+	ActiveAble: 6,
+	day: 25,
+	stage: `Chặng 3 “Chăm sóc cho khu vườn”`,
+	activities: [
+		{
+			canActive: false,
+			content: `Bắt đầu Journal, ngoài hai loại được đề xuất, bạn có thể lựa chọn bất kì loại Journal nào phù hợp với bản thân`,
+		},
+		{
+			canActive: false,
+			content: `Mỗi sáng hoặc tối hãy viết vào giấy hoặc sổ (để dễ dàng lưu giữ) những điều này:`,
+		},
+		{
+			canActive: true,
+			content: `• Cảm xúc trong một tình huống nhất định.`,
+		},
+		{
+			canActive: true,
+			content: `• Khoảng khắc chiêm nghiệm cuộc sống`,
+		},
+		{
+			canActive: true,
+			content: `• Sai lầm trong quá khứ,`,
+		},
+		{
+			canActive: true,
+			content: `• Giấc mơ tối hôm trước. `,
+		},
+		{
+			canActive: true,
+			content: `• Cảm xúc về một người thân.`,
+		},
+		{
+			canActive: true,
+			content: `• ...`,
+		},
+	],
+};
+DayList.push(Day25);
+
+const Day26 = {
+	ActiveAble: 2,
+	day: 26,
+	stage: `Chặng 3 “Chăm sóc cho khu vườn”`,
+	activities: [
+		{
+			canActive: true,
+			content: `Duy trì việc viết Journal mỗi ngày.`,
+		},
+		{
+			canActive: true,
+			content: `Suy nghĩ về sở thích mà bạn có thể biến nó thành đam mê.`,
+		},
+	],
+};
+DayList.push(Day26);
+
+const Day27 = {
+	ActiveAble: 4,
+	day: 27,
+	stage: `Chặng 3 “Chăm sóc cho khu vườn”`,
+	activities: [
+		{
+			canActive: false,
+			content: `Đã đến những ngày cuối cùng của chặng đường, bạn có thể nhận thấy được thành quả mà sau bao ngày cố gắng. Nhưng vẫn có rất nhiều cám dỗ khiến ta quay lại con đường cũ. Sau đây là vài mẹp giúp bạn vượt qua nó:`,
+		},
+		{
+			canActive: true,
+			content: `• Rèn luyện sự kỷ luật`,
+		},
+		{
+			canActive: true,
+			content: `• Nhờ bạn bè, người thân nhắc nhở khi sai lầm`,
+		},
+		{
+			canActive: true,
+			content: `• Tập thể dục, chơi thể thao từ 1 tiếng trở lên/ tuần`,
+		},
+		{
+			canActive: true,
+			content: `• Trò chuyện, chia sẻ với người bạn tin tưởng khi gặp khó khăn`,
+		},
+	],
+};
+DayList.push(Day27);
+
+const Day28 = {
+	ActiveAble: 4,
+	day: 28,
+	stage: `Chặng 3 “Chăm sóc cho khu vườn”`,
+	activities: [
+		{
+			canActive: true,
+			content: `Hôm nay bạn đã viết Journal chưa? `,
+		},
+		{
+			canActive: false,
+			content: `Đề xuất một số app bạn có thể tải để hạn chế thời gian dùng mạng xã hội, game,...`,
+		},
+		{
+			canActive: true,
+			content: `• Srceen Time - Restrain yourself`,
+		},
+		{
+			canActive: true,
+			content: `• YourHour - ScreenTime Control`,
+		},
+		{
+			canActive: true,
+			content: `• StayFree: Sức khỏe số `,
+		},
+	],
+};
+DayList.push(Day28);
+
+const Day29 = {
+	ActiveAble: 3,
+	day: 29,
+	stage: `Chặng 3 “Chăm sóc cho khu vườn”`,
+	activities: [
+		{
+			canActive: true,
+			content: `Viết về thói quen sinh hoạt của bạn 1 tháng trước và bây giờ.`,
+		},
+		{
+			canActive: true,
+			content: `Chia sẻ hành trình này với ít nhất 2 người mà bạn tin tưởng.`,
+		},
+		{
+			canActive: true,
+			content: `Tự khen thưởng và biết ơn chính bản thân vì đã nổ lực hết sức.`,
+		},
+	],
+};
+DayList.push(Day29);
+
+const Day30 = {
+	ActiveAble: 2,
+	day: 30,
+	stage: ``,
+	activities: [
+		{
+			canActive: true,
+			content: `Vậy là đã đến thời khắc kết thúc hành trình DOPAMINE RESET, đội ngũ DOPAMINE RESET xin chân thành cảm ơn bạn đã tin tưởng đồng hành cùng chúng tôi khoảng thời gian vừa qua.`,
+		},
+		{
+			canActive: true,
+			content: `Cuộc hành trình đi hạnh phúc và niềm vui đích thực vẫn còn tiếp tục trong tương lai. Chúng tôi mong rằng bạn luôn kiên cường vượt qua cám dỗ, chông gai. Cũng như có thật nhiều trải nghiệm thú vị cho bản thân.`,
+		},
+		{
+			canActive: false,
+			content: (
+				<div className="float-right">
+					<p className="mb-3">Chân thành cảm ơn</p>
+					<p>DOPAMINE RESET</p>
+				</div>
+			),
+		},
+	],
+};
+DayList.push(Day30);
+
 export default DayList;
