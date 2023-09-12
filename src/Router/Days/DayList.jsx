@@ -175,4 +175,132 @@ const Day7 = {
 };
 DayList.push(Day7);
 
+const Day8 = {
+	ActiveAble: 2,
+	day: 8,
+	stage: `Chặng 1: “Nhổ cỏ dại trong khu vườn”`,
+	activities: [
+		{
+			canActive: false,
+			content: `Hãy biết ơn những gì bạn có và đừng tập trung vào những gì bạn không có.`,
+		},
+		{
+			canActive: true,
+			content: `• Viết ra giấy ít nhất năm điều bạn biết ơn khi có trong cuộc sống.`,
+		},
+		{
+			canActive: true,
+			content: `• Giảm 80% số lượng, thời gian bạn dành cho mạng xã hội, game, mua sắm,...`,
+		},
+	],
+};
+DayList.push(Day8);
+
+const Day9 = {
+	ActiveAble: 2,
+	day: 9,
+	stage: `Chặng 1: “Nhổ cỏ dại trong khu vườn”`,
+	activities: [
+		{
+			canActive: true,
+			content: `Giảm 80% số lượng, thời gian bạn dành cho mạng xã hội, game, mua sắm,...`,
+		},
+		{
+			canActive: true,
+			content: `Tử tế với bản thân.`,
+		},
+		{
+			canActive: false,
+			content: `Nếu bạn mắc sai lầm, hãy cố gắng không lặp lại và học hỏi từ nó. Chỉ cần tiếp tục cố gắng và cuối cùng bạn sẽ đạt được mục tiêu của mình.`,
+		},
+	],
+};
+DayList.push(Day9);
+
+const Day10 = {
+	ActiveAble: 1,
+	day: 10,
+	stage: `Chặng 1: “Nhổ cỏ dại trong khu vườn”`,
+	activities: [
+		{
+			canActive: true,
+			content: `Chặng 1: “Nhổ cỏ dại trong khu vườn”đã kết thúc. Hãy tự khen thưởng chính bản thân mình vì đã nổ lực hết sức. `,
+		},
+		{
+			canActive: false,
+			content: (
+				<>
+					<p>Nhắc nhở: </p>
+					<p>
+						Tuy vậy đừng lơ là trước những tác nhân gây nghiện. Khi bạn thiếu kỷ luật, nuông chiều
+						bản thân quá mức sẽ khiến tiếp tục lạm dụng những nguồn dopamine mạnh (game, mạng xã
+						hội,chất kích thích) . Khi đó ta phải bắt đầu lại và hành trình sẽ gian nan hơn rất
+						nhiều.
+					</p>
+				</>
+			),
+		},
+	],
+};
+DayList.push(Day10);
+
+const Day11 = {
+	ActiveAble: 1,
+	day: 11,
+	stage: `Chặng 2: “Gieo trồng những hạt giống tốt”`,
+	activities: [
+		{
+			canActive: false,
+			content: `Ở chặng này, ta sẽ cùng nhau xây dựng những thói quen tốt đẹp thay thế những thói quen cũ. Xây dựng một cuộc sống không phụ thuộc quá nhiều vào những nguồn kích thích dopamine mạnh, độc hại mà vẫn cảm thấy hạnh phúc và vui vẻ.`,
+		},
+		{
+			canActive: true,
+			content: `• Tìm hiểu sở thích mà bạn đang thực hiện.`,
+		},
+	],
+};
+DayList.push(Day11);
+
+const Day12 = {
+	ActiveAble: 2,
+	day: 12,
+	stage: `Chặng 2: “Gieo trồng những hạt giống tốt”`,
+	activities: [
+		{
+			canActive: true,
+			content: `Sau khi tìm hiểu sở thích của mình, hãy liệt kê ra những việc mà bạn thích làm nhất vào thời gian rảnh.`,
+		},
+		{
+			canActive: true,
+			content: `Một số sở thích phù hợp với học sinh: chơi thể thao, đọc sách, vẽ, viết lách, quay dựng video, chụp ảnh, viết content,... Hãy chọn từ 2-4 việc mà bạn cảm thấy tận hưởng khi thực hiện.`,
+		},
+	],
+};
+DayList.push(Day12);
+
+const Day13 = {
+	ActiveAble: 2,
+	day: 13,
+	stage: `Chặng 2: “Gieo trồng những hạt giống tốt”`,
+	activities: [
+		{
+			canActive: true,
+			content: `• Hãy dành thời gian khoảng 1-2 tiếng/tuần để tham gia những hoạt động mà bạn yêu thích. `,
+		},
+		{
+			canActive: false,
+			content: `Ví dụ: dành ngày cuối tuần để nấu ăn cho người thân.`,
+		},
+		{
+			canActive: false,
+			content: `Thành lập thói quen tốt cho sức khỏe. Bắt đầu từ việc ghi ra những việc thường làm mỗi sáng.`,
+		},
+		{
+			canActive: true,
+			content: `• Hãy uống một ly nước sau khi vừa thức dậy.`,
+		},
+	],
+};
+DayList.push(Day13);
+
 export default DayList;
