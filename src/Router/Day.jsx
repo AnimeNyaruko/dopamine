@@ -19,11 +19,11 @@ export default function Day() {
 		const stage = param.changID;
 		switch (stage):
 			case '1':
-				if (dayNumber<= 10 &&dayNumber >0) return true;
+				if (dayNumber<= 10 && dayNumber >0) return true;
 			case '2':
 				if (dayNumber >10 && dayNumber <=20)return true;
 			case '3':
-				if(dayNumber > 20 %% dayNumber <=30) return true;
+				if(dayNumber > 20 && dayNumber <=30) return true;
 
 		return false;
 	};
