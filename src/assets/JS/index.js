@@ -1,6 +1,5 @@
 export default function run() {
 	const scrollOffset = 100;
-	const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 
 	const elementInView = (el, offSet = 0, isHigher = true) => {
 		const elementTop = el.getBoundingClientRect().top;
@@ -29,9 +28,21 @@ export default function run() {
 				e.classList.remove('scroll-animation-scrolled');
 		});
 	};
+	function throttle(func, delay) {
+		let lastCall = 0;
 
-	if (mediaQuery && !mediaQuery.matches) scrollHandler();
-	window.addEventListener('scroll', () => {
-		if (mediaQuery && !mediaQuery.matches) scrollHandler();
-	});
+		return function (...args) {
+			const now = new Date().getTime();
+
+			if (now - lastCall < delay) {
+				return;
+			}
+
+			lastCall = now;
+			return func(...args);
+		};
+	}
+
+	scrollHandler();
+	window.addEventListener('scroll', throttle(scrollHandler, 125));
 }

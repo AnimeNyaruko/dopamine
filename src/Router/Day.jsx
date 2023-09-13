@@ -2,7 +2,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { DaysItemConfig, progressConfig } from '../assets/JS/Config.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import DayFrame from './Days/DayFrameworkl.jsx';
 import Day30 from './Days/DayFrameworkForDay30.jsx';
 import DayFrameSpecial from './Days/DayFrameworkSpecial.jsx';
@@ -12,23 +12,27 @@ export default function Day() {
 	const navigate = useNavigate();
 	const param = useParams();
 	const dayNumber = parseInt(param.dayID.split('-')[1]);
-	const stageNumber = dayNumber <= 10 ? '/Chang/1' : dayNumber <= 20 ? '/Chang/2' : '/Chang/3';
+	const stageNumber = dayNumber <= 10 ? '1' : dayNumber <= 20 ? '2' : '3';
 	const [state, setState] = useState(false);
 
-	const checkPage = () => {
+	let checkPage = () => {
 		const stage = param.changID;
-		switch (stage):
+		switch (stage) {
 			case '1':
-				if (dayNumber<= 10 && dayNumber >0) return true;
+				if (dayNumber <= 10 && dayNumber > 0) return true;
+				break;
 			case '2':
-				if (dayNumber >10 && dayNumber <=20)return true;
+				if (dayNumber > 10 && dayNumber <= 20) return true;
+				break;
 			case '3':
-				if(dayNumber > 20 && dayNumber <=30) return true;
+				if (dayNumber > 20 && dayNumber <= 30) return true;
+				break;
+		}
 
 		return false;
 	};
-	if (!checkPage) {
-		navigate('*');
+	if (!checkPage()) {
+		navigate('/*');
 	}
 
 	useEffect(() => {
@@ -52,7 +56,7 @@ export default function Day() {
 			<div
 				className="w-fit h-fit my-2 lg:my-0"
 				onClick={() => {
-					navigate(stageNumber);
+					navigate(`/Chang/${stageNumber}`);
 				}}>
 				<FontAwesomeIcon
 					className="absolute top-3 left-3 text-white cursor-pointer"

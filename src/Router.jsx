@@ -4,6 +4,7 @@ import Start from './Router/Start.jsx';
 import Stages from './Router/Stages.jsx';
 import Day from './Router/Day.jsx';
 import importLib from './assets/JS/importLib.js';
+import Error from './Router/ErrorPage.jsx';
 import { useEffect, useState } from 'react';
 
 export default function App() {
@@ -15,10 +16,10 @@ export default function App() {
 	return (
 		<Routes>
 			<Route index path="/" element={<Home />} />
-			<Route path="/Chang" element={<Start />} />
-			<Route path="Chang/:changID" element={<Stages />} />
-			<Route path="Chang/:changID/:dayID" element={<Day />} />
-			<Route path="*" element={<p>Page Not Found</p>} />
+			<Route exact path="/Chang" element={<Start />} />
+			<Route exact path="Chang/:changID" element={<Stages />} />
+			<Route exact path="Chang/:changID/:dayID" element={<Day />} />
+			<Route exact path="*" element={<Error />} />
 		</Routes>
 	);
 }
