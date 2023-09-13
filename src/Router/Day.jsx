@@ -1,6 +1,8 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { DaysItemConfig, progressConfig } from '../assets/JS/Config.js';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
 import DayFrame from './Days/DayFrameworkl.jsx';
 import Day30 from './Days/DayFrameworkForDay30.jsx';
 import DayFrameSpecial from './Days/DayFrameworkSpecial.jsx';
@@ -10,7 +12,15 @@ export default function Day() {
 	const navigate = useNavigate();
 	const param = useParams();
 	const dayNumber = parseInt(param.dayID.split('-')[1]);
+	const stageNumber = dayNumber <= 10 ? '/Chang/1' : dayNumber <= 20 ? '/Chang/2' : '/Chang/3';
 	const [state, setState] = useState(false);
+
+	const checkPage = () => {
+		if()
+	};
+	if (!checkPage) {
+		navigate('*');
+	}
 
 	useEffect(() => {
 		if (state) {
@@ -23,9 +33,27 @@ export default function Day() {
 		}
 		setState(true);
 	}, [state]);
-	if (dayNumber < 30 && dayNumber % 10 == 0) return DayFrameSpecial(DayList[dayNumber - 1]);
-	else if (dayNumber == 30) return Day30(DayList[dayNumber - 1]);
-	return DayFrame(DayList[dayNumber - 1]);
+	const code = (
+		<>
+			{(function () {
+				if (dayNumber < 30 && dayNumber % 10 == 0) return DayFrameSpecial(DayList[dayNumber - 1]);
+				else if (dayNumber == 30) return Day30(DayList[dayNumber - 1]);
+				return DayFrame(DayList[dayNumber - 1]);
+			})()}
+			<div
+				className="w-fit h-fit my-2 lg:my-0"
+				onClick={() => {
+					navigate(stageNumber);
+				}}>
+				<FontAwesomeIcon
+					className="absolute top-3 left-3 text-white cursor-pointer"
+					icon="fa-solid fa-left-long"
+					size="3x"
+				/>
+			</div>
+		</>
+	);
+	return code;
 }
 
 /**

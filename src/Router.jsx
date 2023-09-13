@@ -18,6 +18,7 @@ export default function App() {
 			<Route path="/Chang" element={<Start />} />
 			<Route path="Chang/:changID" element={<Stages />} />
 			<Route path="Chang/:changID/:dayID" element={<Day />} />
+			<Route path="*" element={<p>Page Not Found</p>} />
 		</Routes>
 	);
 }
