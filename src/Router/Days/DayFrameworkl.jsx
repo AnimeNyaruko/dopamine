@@ -72,10 +72,9 @@ function DayFrame(Day) {
 	useEffect(() => {
 		if (state) {
 			const windowWidth = window.screen.availWidth;
-			setTimeout(() => {
-				line.current.style.width =
-					windowWidth - progress * (windowWidth / ActiveAbleElement) + 'px';
-			}, 500);
+			// setTimeout(() => {
+			line.current.style.width = windowWidth - progress * (windowWidth / ActiveAbleElement) + 'px';
+			// }, 500);
 		}
 		setState(true);
 	}, [state]);
