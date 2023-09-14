@@ -70,9 +70,9 @@ function DayFrame(Day) {
 
 	useEffect(() => {
 		const windowWidth = window.screen.availWidth;
-		setTimeout(() => {
-			line.current.style.width = windowWidth - progress * (windowWidth / ActiveAbleElement) + 'px';
-		}, 500);
+		// setTimeout(() => {
+		line.current.style.width = windowWidth - progress * (windowWidth / ActiveAbleElement) + 'px';
+		// }, 250);
 	}, []);
 	useEffect(() => {
 		sessionStorage.setItem(`Day${DayNumber}`, JSON.stringify(DayObj));
