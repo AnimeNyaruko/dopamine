@@ -4,6 +4,7 @@ import Start from './Router/Start.jsx';
 import Stages from './Router/Stages.jsx';
 import Day from './Router/Day.jsx';
 import importLib from './assets/JS/importLib.js';
+import DownloadPDF from './Router/DownloadPDF.jsx';
 import Error from './Router/ErrorPage.jsx';
 import { useEffect, useState } from 'react';
 
@@ -19,6 +20,7 @@ export default function App() {
 			<Route exact path="/Chang" element={<Start />} />
 			<Route exact path="Chang/:changID" element={<Stages />} />
 			<Route exact path="Chang/:changID/:dayID" element={<Day />} />
+			<Route exact path="/DOPAMINE-RESET-SHCE" element={<DownloadPDF />} />
 			<Route exact path="*" element={<Error />} />
 		</Routes>
 	);

@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect, useCallback, useMemo } from 'react';
 import AnimatedNumber from 'animated-number-react';
 
 function DayFrame(Day) {
@@ -6,34 +6,57 @@ function DayFrame(Day) {
 	const Stage = Day.stage;
 	const Activities = Day.activities;
 	const ActiveAbleElement = Day.ActiveAble;
+	const DayObj = useMemo(() => {
+		return (
+			JSON.parse(window.sessionStorage.getItem(`Day${DayNumber}`)) || {
+				CurrentProgress: 0,
+				Elements: Array.from({ length: ActiveAbleElement }, (v) => {
+					v = 0;
+					return v;
+				}),
+			}
+		);
+	}, [ActiveAbleElement, DayNumber]);
 	const line = useRef(null);
-	const [progress, setProgress] = useState(0);
-	const handleClick = (e) => {
-		const element = e.target;
-		const isContain = element.classList.contains('text-slate-400');
-		const windowWidth = window.screen.availWidth;
-		const lineElement = line.current;
-		if (isContain) {
-			element.classList.remove('text-slate-400');
-			element.classList.add('text-green-400');
-			setProgress(progress + 1);
-			lineElement.style.width =
-				windowWidth - (progress + 1) * (windowWidth / ActiveAbleElement) + 'px';
-		} else {
-			element.classList.remove('text-green-400');
-			element.classList.add('text-slate-400');
-			setProgress(progress - 1);
-			lineElement.style.width =
-				windowWidth - (progress - 1) * (windowWidth / ActiveAbleElement) + 'px';
-		}
-	};
+	const [progress, setProgress] = useState(DayObj.CurrentProgress);
+	const [state, setState] = useState(false);
+
+	const handleClick = useCallback(
+		(e, index) => {
+			const element = e.target;
+			const isContain = element.classList.contains('text-slate-400');
+			const windowWidth = window.screen.availWidth;
+			const lineElement = line.current;
+			if (isContain) {
+				element.classList.remove('text-slate-400');
+				element.classList.add('text-green-400');
+				setProgress(progress + 1);
+				lineElement.style.width =
+					windowWidth - (progress + 1) * (windowWidth / ActiveAbleElement) + 'px';
+				DayObj.Elements[index] = 1;
+				DayObj.CurrentProgress++;
+			} else {
+				element.classList.remove('text-green-400');
+				element.classList.add('text-slate-400');
+				setProgress(progress - 1);
+				lineElement.style.width =
+					windowWidth - (progress - 1) * (windowWidth / ActiveAbleElement) + 'px';
+				DayObj.Elements[index] = 0;
+				DayObj.CurrentProgress--;
+			}
+		},
+		[ActiveAbleElement, DayObj.CurrentProgress, DayObj.Elements, progress]
+	);
 	const ContentElement = (Content, key) => {
 		if (Content.canActive) {
+			const colorDepc = DayObj.Elements[key] ? 'green' : 'slate';
 			return (
 				<div
-					onClick={handleClick}
+					onClick={(e) => {
+						handleClick(e, key);
+					}}
 					key={key}
-					className="activity-items w-fit cursor-pointer font-medium text-slate-400">
+					className={`activity-items w-fit cursor-pointer font-medium text-${colorDepc}-400`}>
 					{Content.content}
 				</div>
 			);
@@ -45,6 +68,20 @@ function DayFrame(Day) {
 			);
 		}
 	};
+
+	useEffect(() => {
+		if (state) {
+			const windowWidth = window.screen.availWidth;
+			setTimeout(() => {
+				line.current.style.width =
+					windowWidth - progress * (windowWidth / ActiveAbleElement) + 'px';
+			}, 500);
+		}
+		setState(true);
+	}, [state]);
+	useEffect(() => {
+		sessionStorage.setItem(`Day${DayNumber}`, JSON.stringify(DayObj));
+	}, [handleClick, DayNumber, DayObj]);
 
 	const HTMLcode = (
 		<>
@@ -65,7 +102,8 @@ function DayFrame(Day) {
 					</div>
 					<div id="activities" className="mt-4 text-xl sm:text-2xl lg:text-4xl">
 						{Activities.map((e, i) => {
-							return ContentElement(e, i);
+							const content = ContentElement(e, i);
+							return content;
 						})}
 					</div>
 				</div>
